@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/SnackMachine.cs">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/SnackMachine.cs" />
+              <option name="originalContent" value="namespace PracticingDDD.Logic&#10;{&#10;    public sealed class SnackMachine&#10;    {&#10;        &#10;        public int OneCentCount { get; private set; }&#10;        public int TenCentCount {get; private set;} &#10;        public int QuarterCount {get; private set;} &#10;        public int OneDollarCount {get; private set;} &#10;        public int TenDollarCount {get; private set;} &#10;        public int TwentyDollarCount {get; private set;} &#10;        &#10;        public void InsertMoney()&#10;        {&#10;        &#10;        }&#10;    }&#10;    &#10;    &#10;}" />
+              <option name="updatedContent" value="namespace PracticingDDD.Logic&#10;{&#10;    public sealed class SnackMachine&#10;    {&#10;        &#10;        public int OneCentCount { get; private set; }&#10;        public int TenCentCount {get; private set;} &#10;        public int QuarterCount {get; private set;} &#10;        public int OneDollarCount {get; private set;} &#10;        public int TenDollarCount {get; private set;} &#10;        public int TwentyDollarCount {get; private set;} &#10;        &#10;        public void InsertMoney()&#10;        {&#10;&#10;        }&#10;    }&#10;    &#10;    &#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

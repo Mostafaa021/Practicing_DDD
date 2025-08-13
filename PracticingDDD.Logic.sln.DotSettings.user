@@ -1,0 +1,20 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=454f1861_002D1a05_002D4e7f_002D91fe_002D5a235b9a9779/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Sum_of_two_money_objects_produces_correct_result" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.MoneySpecs.Sum_of_two_money_objects_produces_correct_result&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.MoneySpecs.Two_money_instances_equal_if_contain_the_same_money_amount&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.MoneySpecs.Two_money_instances_do_not_equal_if_contain_different_money_amounts&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.MoneySpecs.Cannot_create_money_with_negative_value&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.MoneySpecs.Amount_is_calculated_correctly&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=fbdd9cd7_002D99ed_002D40e6_002D9587_002D9b105417cbce/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Amount_is_calculated_correctly" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.MoneySpecs.Amount_is_calculated_correctly&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.MoneySpecs.SubtractionOperator_WhenSubtractingSpecificDenominationExcess_ThrowsInvalidOperationException&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.SnackMachineSpecs.Return_money_empties_money_in_transaction&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.SnackMachineSpecs.Inserted_money_goes_to_money_in_transaction&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.SnackMachineSpecs.Cannot_insert_more_than_one_coin_or_note_at_a_time&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.SnackMachineSpecs.Money_in_transaction_goes_to_money_inside_after_purchase&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
