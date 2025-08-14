@@ -48,7 +48,7 @@ namespace PracticingDDD.Tests
             snackMachine.BuySnack(); // Buy a snack
  
             snackMachine.MoneyInTransaction.Should().Be(None);
-            snackMachine.MoneyInSide.Amount.Should().Be(2m); // Money inside should be 2 dollars
+            snackMachine.MoneyInside.Amount.Should().Be(2m); // Money inside should be 2 dollars
         }
         
     }

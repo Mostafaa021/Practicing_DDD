@@ -2,7 +2,7 @@ namespace PracticingDDD.Logic
 {
     public  abstract class Entity
     {
-        public long Id { get; private set;  }
+        public virtual long Id { get; protected set; }
 
         public override bool Equals(object obj)
         {

@@ -5,13 +5,13 @@ using static PracticingDDD.Logic.Money;
 
 namespace PracticingDDD.Logic
 {
-    public sealed class SnackMachine : Entity
+    public class SnackMachine : Entity
     {
 
-        public Money MoneyInSide { get; private set; } = None;
-        public Money MoneyInTransaction { get; private set; } = None;
+        public virtual Money MoneyInside { get; protected set; } = None;
+        public virtual Money MoneyInTransaction { get; protected set; } = None;
 
-      
+
         public void InsertMoney(Money money )
         {
             Money[] coinsAndNotes =
@@ -21,7 +21,7 @@ namespace PracticingDDD.Logic
             if (!coinsAndNotes.Contains(money))
                 throw new InvalidOperationException("Invalid money type inserted");
             MoneyInTransaction += money;
-            
+
         }
         public void ReturnMoney()
         {
@@ -29,11 +29,12 @@ namespace PracticingDDD.Logic
         }
         public void BuySnack()
         {
-            MoneyInSide += MoneyInTransaction;
+            MoneyInside += MoneyInTransaction;
 
             MoneyInTransaction = None; // Reset transaction money to None
         }
+        
     }
-    
-    
+
+
 }

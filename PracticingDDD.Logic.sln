@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticingDDD.Logic", "Prac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticingDDD.Tests", "PracticingDDD.Tests\PracticingDDD.Tests.csproj", "{CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticingDDD.UI", "PracticingDDD.UI\PracticingDDD.UI.csproj", "{22298B76-87EC-4C16-A393-CA2D780CA15D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22298B76-87EC-4C16-A393-CA2D780CA15D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22298B76-87EC-4C16-A393-CA2D780CA15D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22298B76-87EC-4C16-A393-CA2D780CA15D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22298B76-87EC-4C16-A393-CA2D780CA15D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
