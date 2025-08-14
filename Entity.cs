@@ -1,3 +1,6 @@
+using System;
+using NHibernate.Proxy;
+
 namespace PracticingDDD.Logic
 {
     public  abstract class Entity
@@ -13,7 +16,7 @@ namespace PracticingDDD.Logic
             // Check if the object is the same instance
             if (ReferenceEquals(this, other)) return true;
             // Check if the object is of the same type
-            if (other.GetType() != GetType()) return false;
+            if (other.GetRealType() != GetRealType()) return false;
             // Check if Id is zero for either entity
             if (Id == 0 || other.Id == 0) return false;
             return Id == other.Id;
@@ -38,7 +41,13 @@ namespace PracticingDDD.Logic
         public override int GetHashCode()
         {
             // Generate a hash code based on the type and Id
-            return (GetType().ToString() + Id).GetHashCode();
+            return (GetRealType().ToString() + Id).GetHashCode();
+        }
+        
+        private Type GetRealType()
+        {
+            // Get the runtime type of the current instance
+            return NHibernateProxyHelper.GetClassWithoutInitializingProxy(this);
         }
     }
 }

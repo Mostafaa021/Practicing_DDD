@@ -36,7 +36,7 @@ namespace PracticingDDD.Logic
             int oneDollarCount,
             int fiveDollarCount,
             int twentyDollarCount
-        )
+        ) : this()
         {
             if (oneCentCount < 0 || tenCentCount < 0 ||
                 quarterCount < 0 || oneDollarCount < 0 ||

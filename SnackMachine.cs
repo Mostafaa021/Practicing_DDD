@@ -12,7 +12,7 @@ namespace PracticingDDD.Logic
         public virtual Money MoneyInTransaction { get; protected set; } = None;
 
 
-        public void InsertMoney(Money money )
+        public virtual void InsertMoney(Money money )
         {
             Money[] coinsAndNotes =
             {
@@ -23,11 +23,11 @@ namespace PracticingDDD.Logic
             MoneyInTransaction += money;
 
         }
-        public void ReturnMoney()
+        public virtual void ReturnMoney()
         {
            MoneyInTransaction = None; // Reset transaction money to None
         }
-        public void BuySnack()
+        public virtual void BuySnack()
         {
             MoneyInside += MoneyInTransaction;
 
