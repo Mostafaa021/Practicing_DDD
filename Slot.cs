@@ -19,7 +19,7 @@ namespace PracticingDDD.Logic
             Snack snack,
             int quantity,
             decimal price
-            ) : this()
+        ) : this()
         {
             Snack = snack;
             SnackMachine = snackMachine;
