@@ -8,7 +8,13 @@
     &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.MoneySpecs.Amount_is_calculated_correctly&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=fbdd9cd7_002D99ed_002D40e6_002D9587_002D9b105417cbce/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Amount_is_calculated_correctly" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a90656a2_002D68a0_002D4536_002D822d_002Dc9416c524dc7/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="BuySnack_trades_inserted_money_for_a_snack" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.SnackMachineSpecs.BuySnack_trades_inserted_money_for_a_snack&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.SnackePileSpecs&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=fbdd9cd7_002D99ed_002D40e6_002D9587_002D9b105417cbce/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Amount_is_calculated_correctly" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.MoneySpecs.Amount_is_calculated_correctly&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.MoneySpecs.SubtractionOperator_WhenSubtractingSpecificDenominationExcess_ThrowsInvalidOperationException&lt;/TestId&gt;&#xD;
@@ -16,5 +22,7 @@
     &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.SnackMachineSpecs.Inserted_money_goes_to_money_in_transaction&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.SnackMachineSpecs.Cannot_insert_more_than_one_coin_or_note_at_a_time&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.SnackMachineSpecs.Money_in_transaction_goes_to_money_inside_after_purchase&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.SnackMachineSpecs.BuySnack_Trades_inserted_Money_For_Snack&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.SnackMachineSpecs.BuySnack_trades_inserted_money_for_a_snack&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

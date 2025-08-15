@@ -1,0 +1,55 @@
+using System;
+
+namespace PracticingDDD.Logic
+{
+    public class SnackPile : ValueObject<SnackPile>
+    {
+        public Snack Snack { get; }
+        public int Quantity { get; }
+        public decimal Price { get;  }
+
+        private SnackPile()
+        {
+            
+        }
+        public SnackPile(Snack snack, int quantity, decimal price) : this()
+        {
+            if (snack == null)
+                throw new ArgumentNullException(nameof(snack), "Snack cannot be null");
+            if (quantity < 0)
+                throw new ArgumentOutOfRangeException(nameof(quantity), "Quantity cannot be negative");
+            if (price < 0)
+                throw new ArgumentOutOfRangeException(nameof(price), "Price cannot be negative");
+            if(price % 0.01m > 0)
+                throw new ArgumentOutOfRangeException();
+            Snack = snack;
+            Quantity = quantity;
+            Price = price;
+        }
+        public SnackPile SubtractOne()
+        {
+            // Ensure that quantity is greater than zero before subtracting
+            if (Quantity <= 0)
+                throw new InvalidOperationException("Cannot subtract from an empty snack pile");
+            return new SnackPile(Snack, Quantity - 1, Price);
+        }
+        protected override bool EqualsCore(SnackPile other)
+        {
+            return Snack == other.Snack 
+                   && Quantity == other.Quantity 
+                   && Price == other.Price;
+        }
+
+        protected override int GetHashCodeCore()
+        {
+            unchecked
+            {
+               
+                int hashCode = Snack.GetHashCode();
+                hashCode = (hashCode * 397) ^ Quantity;
+                hashCode = (hashCode * 397) ^ Price.GetHashCode();
+                return hashCode;
+            }
+        }
+    }
+}

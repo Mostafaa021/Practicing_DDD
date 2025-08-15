@@ -13,7 +13,7 @@ namespace PracticingDDD.Logic
         public virtual Money MoneyInside { get; protected set; } 
         public virtual Money MoneyInTransaction { get; protected set; }
 
-        public virtual IList<Slot> Slots { get; protected set; } 
+        protected virtual IList<Slot> Slots { get; set; } 
 
         public SnackMachine()
         {
@@ -21,15 +21,23 @@ namespace PracticingDDD.Logic
             MoneyInTransaction = None;
             Slots = new List<Slot>()
             {
-                new Slot(this, 1, null, 0, 0m),
-                new Slot(this, 2, null, 0, 0m),
-                new Slot(this, 3, null, 0, 0m),
+                new Slot(this,1 ),
+                new Slot(this,2 ),
+                new Slot(this,3),
             };
             
         }
+        
+       public virtual SnackPile GetSnackPile(int position)
+        {
+           return GetSlot(position).SnackPile;
+        }
 
-
-        public void InsertMoney(Money money )
+        private Slot GetSlot(int position)
+        {
+            return Slots.Single(s => s.Position == position);
+        }
+        public virtual void InsertMoney(Money money )
         {
             Money[] coinsAndNotes =
             {
@@ -40,22 +48,22 @@ namespace PracticingDDD.Logic
             MoneyInTransaction += money;
 
         }
-        public void ReturnMoney()
+        public virtual void ReturnMoney()
         {
            MoneyInTransaction = None; // Reset transaction money to None
         }
-        public void BuySnack(int position)
+        public virtual void BuySnack(int position)
         {
+            var slot = GetSlot(position);
+            slot.SnackPile =  slot.SnackPile.SubtractOne();
+            
             MoneyInside += MoneyInTransaction;
-
             MoneyInTransaction = None; // Reset transaction money to None
         }
-        public void LoadSnacks(int position, Snack snack, int quantity, decimal price)
+        public virtual void LoadSnacks(int position, SnackPile snackPile)
         {
-            var slot = Slots.Single(s => s.Position == position);
-            slot.Snack = snack;
-            slot.Quantity = quantity;
-            slot.Price = price;
+            var slot = GetSlot(position);
+            slot.SnackPile = snackPile;
         }
         
     }

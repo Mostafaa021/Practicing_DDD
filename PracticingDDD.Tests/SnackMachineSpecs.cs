@@ -24,7 +24,7 @@ namespace PracticingDDD.Tests
         {
             var snackMachine = new SnackMachine();
  
-            snackMachine.LoadSnacks(1 , new Snack("Lays") , 10 , 1m); // Load snacks into the machine
+            snackMachine.LoadSnacks(1 , new SnackPile(new Snack("Lays") , 10 , 1m)); // Load snacks into the machine
             snackMachine.InsertMoney(OneDollar);
  
             snackMachine.MoneyInTransaction.Amount.Should().Be(1.01m);
@@ -55,14 +55,15 @@ namespace PracticingDDD.Tests
         public void BuySnack_trades_inserted_money_for_a_snack()
         {
             var snackMachine = new SnackMachine();
-            snackMachine.LoadSnacks(1, new Snack("Layes"), 10, 1m); // Load a snack into the machine
+            snackMachine.LoadSnacks(1, new SnackPile(new Snack("Lays") , 10 , 1m)); // Load a snack into the machine
             snackMachine.InsertMoney(OneDollar); // Insert one dollar
 
             snackMachine.BuySnack(1);
 
             snackMachine.MoneyInTransaction.Should().Be(None);
             snackMachine.MoneyInside.Amount.Should().Be(1m);
-            snackMachine.Slots.Single(x=>x.Position == 1).Quantity.Should().Be(9);
+            //snackMachine.Slots.Single(x=>x.Position == 1).Quantity.Should().Be(9);
+            snackMachine.GetSnackPile(1).Quantity.Should().Be(9);
         }
         
     }

@@ -66,6 +66,7 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="MoneySpecs.cs" />
+        <Compile Include="SnackePileSpecs.cs" />
         <Compile Include="SnackMachineSpecs.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
