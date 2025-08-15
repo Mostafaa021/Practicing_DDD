@@ -1,6 +1,6 @@
 namespace PracticingDDD.Logic
 {
-    public abstract class AggregateRoot
+    public abstract class AggregateRoot : Entity
     {
         
     }

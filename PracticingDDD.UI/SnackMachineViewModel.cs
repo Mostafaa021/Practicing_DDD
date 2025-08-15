@@ -51,7 +51,7 @@ namespace DddInPractice.UI
 
         private void BuySnack()
         {
-            _snackMachine.BuySnack();
+            _snackMachine.BuySnack(1); // Assuming position 1 for simplicity
             using (ISession session = SessionFactory.OpenSession()) 
             using (ITransaction transaction = session.BeginTransaction())
             {

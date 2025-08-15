@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using FluentAssertions;
 using PracticingDDD.Logic;
 using Xunit ; 
@@ -23,7 +24,7 @@ namespace PracticingDDD.Tests
         {
             var snackMachine = new SnackMachine();
  
-            snackMachine.InsertMoney(OneCent);
+            snackMachine.LoadSnacks(1 , new Snack("Lays") , 10 , 1m); // Load snacks into the machine
             snackMachine.InsertMoney(OneDollar);
  
             snackMachine.MoneyInTransaction.Amount.Should().Be(1.01m);
@@ -45,10 +46,23 @@ namespace PracticingDDD.Tests
             snackMachine.InsertMoney(OneDollar);
             snackMachine.InsertMoney(OneDollar);
  
-            snackMachine.BuySnack(); // Buy a snack
+            snackMachine.BuySnack(1); // Buy a snack
  
             snackMachine.MoneyInTransaction.Should().Be(None);
             snackMachine.MoneyInside.Amount.Should().Be(2m); // Money inside should be 2 dollars
+        }
+        [Fact]
+        public void BuySnack_trades_inserted_money_for_a_snack()
+        {
+            var snackMachine = new SnackMachine();
+            snackMachine.LoadSnacks(1, new Snack("Layes"), 10, 1m); // Load a snack into the machine
+            snackMachine.InsertMoney(OneDollar); // Insert one dollar
+
+            snackMachine.BuySnack(1);
+
+            snackMachine.MoneyInTransaction.Should().Be(None);
+            snackMachine.MoneyInside.Amount.Should().Be(1m);
+            snackMachine.Slots.Single(x=>x.Position == 1).Quantity.Should().Be(9);
         }
         
     }
