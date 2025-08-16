@@ -1,5 +1,5 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=454f1861_002D1a05_002D4e7f_002D91fe_002D5a235b9a9779/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Sum_of_two_money_objects_produces_correct_result" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=454f1861_002D1a05_002D4e7f_002D91fe_002D5a235b9a9779/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Sum_of_two_money_objects_produces_correct_result" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.MoneySpecs.Sum_of_two_money_objects_produces_correct_result&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.MoneySpecs.Two_money_instances_equal_if_contain_the_same_money_amount&lt;/TestId&gt;&#xD;
@@ -8,10 +8,34 @@
     &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.MoneySpecs.Amount_is_calculated_correctly&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a90656a2_002D68a0_002D4536_002D822d_002Dc9416c524dc7/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="BuySnack_trades_inserted_money_for_a_snack" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=65269b32_002Da5d1_002D42ad_002D95dc_002D82a459ca5bce/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Allocate_Should_Return_None_When_No_Money_Available" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.MoneySpecs.Allocate_Should_Return_None_When_No_Money_Available&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8a772e7a_002D1692_002D465e_002Db68c_002Df2de281be811/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Allocate_Should_Use_Largest_Denominations_First" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.MoneySpecs.Allocate_Should_Use_Largest_Denominations_First&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a90656a2_002D68a0_002D4536_002D822d_002Dc9416c524dc7/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="BuySnack_trades_inserted_money_for_a_snack" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.SnackMachineSpecs.BuySnack_trades_inserted_money_for_a_snack&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.SnackePileSpecs&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.SnackMachineSpecs.Cannot_make_purchase_when_there_is_no_snacks&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.SnackMachineSpecs.Cannot_make_purchase_if_not_enough_money_inserted&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.SnackMachineSpecs.Snack_machine_returns_money_with_highest_denomination_first&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.MoneySpecs.Allocate_Should_Return_Exact_Amount_When_Sufficient_Money_Available&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e7a28587_002Db95f_002D46f8_002D92d8_002D9f26c56e7866/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Allocate_Should_Return_Maximum_Possible_When_Insufficient_Money" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.MoneySpecs.Allocate_Should_Return_Maximum_Possible_When_Insufficient_Money&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.MoneySpecs.Allocate_Should_Handle_Zero_Amount&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.MoneySpecs.Allocate_Should_Return_Exact_Amount_When_Sufficient_Money_Available&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.MoneySpecs.Allocate_Should_Return_None_When_No_Money_Available&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.SnackMachineSpecs.After_purchase_change_is_returned&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CA5F4B42-12A7-4380-8AE2-B6C4AC992A8F::.NETFramework,Version=v4.7.2::PracticingDDD.Tests.SnackMachineSpecs.Cannot_buy_snack_if_not_enough_change&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=fbdd9cd7_002D99ed_002D40e6_002D9587_002D9b105417cbce/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Amount_is_calculated_correctly" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;

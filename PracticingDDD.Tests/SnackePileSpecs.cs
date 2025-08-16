@@ -23,7 +23,7 @@ namespace PracticingDDD.Tests
         }
         
         [Fact]
-        public void Constructor_Should_Throw_ArgumentOutOfRangeException_When_Quantity_Is_Negative()
+        public void Constructor_Should_Throw_InvalidOperationException_When_Quantity_Is_Negative()
         {
             // Arrange
             var snack = new Snack("Chips");
@@ -32,12 +32,10 @@ namespace PracticingDDD.Tests
 
             // Act & Assert
             Action action = () => new SnackPile(snack, quantity, price);
-            action.Should().Throw<ArgumentOutOfRangeException>()
-                .WithParameterName("quantity")
-                .WithMessage("Quantity cannot be negative*");
+            action.Should().Throw<InvalidOperationException>();
         }
         [Fact]
-        public void Constructor_Should_Throw_ArgumentOutOfRangeException_When_Price_Is_Negative()
+        public void Constructor_Should_Throw_InvalidOperationException_When_Price_Is_Negative()
         {
             // Arrange
             var snack = new Snack("Chips");
@@ -46,12 +44,11 @@ namespace PracticingDDD.Tests
 
             // Act & Assert
             Action action = () => new SnackPile(snack, quantity, price);
-            action.Should().Throw<ArgumentOutOfRangeException>()
-                .WithParameterName("price")
-                .WithMessage("Price cannot be negative*");
+            action.Should().Throw<InvalidOperationException>();
+
         }
         [Fact]
-        public void Constructor_Should_Throw_ArgumentOutOfRangeException_When_Price_Has_More_Than_Two_Decimal_Places()
+        public void Constructor_Should_Throw_InvalidOperationException_When_Price_Has_More_Than_Two_Decimal_Places()
         {
             // Arrange
             var snack = new Snack("Chips");
@@ -60,7 +57,7 @@ namespace PracticingDDD.Tests
 
             // Act & Assert
             Action action = () => new SnackPile(snack, quantity, price);
-            action.Should().Throw<ArgumentOutOfRangeException>();
+            action.Should().Throw<InvalidOperationException>();
         }
 
         [Fact]

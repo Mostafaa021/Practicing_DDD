@@ -14,14 +14,10 @@ namespace PracticingDDD.Logic
         }
         public SnackPile(Snack snack, int quantity, decimal price) : this()
         {
-            if (snack == null)
-                throw new ArgumentNullException(nameof(snack), "Snack cannot be null");
-            if (quantity < 0)
-                throw new ArgumentOutOfRangeException(nameof(quantity), "Quantity cannot be negative");
-            if (price < 0)
-                throw new ArgumentOutOfRangeException(nameof(price), "Price cannot be negative");
-            if(price % 0.01m > 0)
-                throw new ArgumentOutOfRangeException();
+            if (quantity < 0 || price < 0 || price % 0.01m > 0)
+                throw new InvalidOperationException();
+            // if (snack == null)
+            //     throw new ArgumentNullException(nameof(snack), "Snack cannot be null");
             Snack = snack;
             Quantity = quantity;
             Price = price;

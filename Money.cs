@@ -60,7 +60,20 @@ namespace PracticingDDD.Logic
                 money1.FiveDollarCount + money2.FiveDollarCount,
                 money1.TwentyDollarCount + money2.TwentyDollarCount);
         }
+        
+        public static Money operator *(Money money1, int multiplier)
+        {
+            if (multiplier < 0)
+                throw new InvalidOperationException("Multiplier cannot be negative");
 
+            return new Money(
+                money1.OneCentCount * multiplier,
+                money1.TenCentCount * multiplier,
+                money1.QuarterCount * multiplier,
+                money1.OneDollarCount * multiplier,
+                money1.FiveDollarCount * multiplier,
+                money1.TwentyDollarCount * multiplier);
+        }
         public static Money operator -(Money money1, Money money2)
         {
             if (money1.OneCentCount < money2.OneCentCount ||
@@ -111,6 +124,34 @@ namespace PracticingDDD.Logic
                 return "¢" + (Amount * 100).ToString("0");
 
             return "$" + Amount.ToString("0.00");
+        }
+
+        public Money Allocate(decimal amount)
+        {
+            var twentyDollarCount = Math.Min((int)(amount / 20), TwentyDollarCount);
+            amount -= (twentyDollarCount * 20);
+    
+            var fiveDollarCount = Math.Min((int)(amount / 5), FiveDollarCount);
+            amount -= (fiveDollarCount * 5);
+    
+            var oneDollarCount = Math.Min((int)amount, OneDollarCount);
+            amount -= oneDollarCount;
+    
+            var quarterCount = Math.Min((int)(amount / 0.25m), QuarterCount);
+            amount -= (quarterCount * 0.25m);
+    
+            var tenCentCount = Math.Min((int)(amount / 0.10m), TenCentCount);
+            amount -= (tenCentCount * 0.10m);
+            var oneCentCount = Math.Min((int)(amount / 0.01m), OneCentCount);
+    
+            return new Money(
+                oneCentCount,
+                tenCentCount,
+                quarterCount,
+                oneDollarCount,
+                fiveDollarCount,
+                twentyDollarCount
+            );
         }
     }
 

@@ -153,6 +153,89 @@ namespace PracticingDDD.Tests
 
                 money.ToString().Should().Be(expectedString);
             }
+            [Fact]
+            public void Allocate_Should_Return_Exact_Amount_When_Sufficient_Money_Available()
+            {
+                // Arrange
+                var money = new Money(10, 10, 10, 10, 10, 10); // $277.90
+                decimal amountToAllocate = 26.41m;
+
+                // Act
+                var result = money.Allocate(amountToAllocate);
+
+                // Assert
+                result.Amount.Should().Be(26.41m);
+                result.OneCentCount.Should().Be(6);  // 0.06m
+                result.TenCentCount.Should().Be(1);  // 0.10m 
+                result.QuarterCount.Should().Be(1);  // 0.25m
+                result.OneDollarCount.Should().Be(1); // 1.00m
+                result.FiveDollarCount.Should().Be(1); // 5.00m
+                result.TwentyDollarCount.Should().Be(1); // 20.00m
+                // Total: 20.00 + 5.00 + 1.00 + 0.25 + 0.10 + 0.06 = 26.41
+            }
+            
+            [Fact]
+            public void Allocate_Should_Use_Largest_Denominations_First()
+            {
+                // Arrange
+                var money = new Money(0, 0, 0, 0, 2, 1); // $30
+                decimal amountToAllocate = 25.00m;
+
+                // Act
+                var result = money.Allocate(amountToAllocate);
+
+                // Assert
+                result.Amount.Should().Be(25.00m);
+                result.TwentyDollarCount.Should().Be(1);
+                result.FiveDollarCount.Should().Be(1);
+                result.OneDollarCount.Should().Be(0);
+            }
+            
+            [Fact]
+            public void Allocate_Should_Return_Maximum_Possible_When_Insufficient_Money()
+            {
+                // Arrange
+                var money = new Money(5, 2, 1, 1, 0, 0); // $1.50
+                decimal amountToAllocate = 10.00m;
+
+                // Act
+                var result = money.Allocate(amountToAllocate);
+
+                // Assert
+                result.Amount.Should().Be(1.50m);
+                result.OneCentCount.Should().Be(5);
+                result.TenCentCount.Should().Be(2);
+                result.QuarterCount.Should().Be(1);
+                result.OneDollarCount.Should().Be(1);
+            }
+            [Fact]
+            public void Allocate_Should_Return_None_When_No_Money_Available()
+            {
+                // Arrange
+                var money = Money.None;
+                decimal amountToAllocate = 5.00m;
+
+                // Act
+                var result = money.Allocate(amountToAllocate);
+
+                // Assert
+                result.Should().Be(Money.None);
+                result.Amount.Should().Be(0);
+            }
+
+            [Fact]
+            public void Allocate_Should_Handle_Zero_Amount()
+            {
+                // Arrange
+                var money = new Money(1, 1, 1, 1, 1, 1);
+                decimal amountToAllocate = 0;
+
+                // Act
+                var result = money.Allocate(amountToAllocate);
+
+                // Assert
+                result.Should().Be(Money.None);
+            }
 
     }
 }
