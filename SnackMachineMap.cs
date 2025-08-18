@@ -1,3 +1,4 @@
+using FluentNHibernate;
 using FluentNHibernate.Mapping;
 
 namespace PracticingDDD.Logic
@@ -17,6 +18,10 @@ namespace PracticingDDD.Logic
                 y.Map(x => x.FiveDollarCount);
                 y.Map(x => x.TwentyDollarCount);
             });
+            HasMany<Slot>(Reveal.Member<SnackMachine>("Slots"))
+                .Cascade.SaveUpdate()
+                .Not.LazyLoad()
+                .Cascade.All();
         }
     }
 }

@@ -24,7 +24,7 @@ namespace PracticingDDD.Tests
         {
             var snackMachine = new SnackMachine();
  
-            snackMachine.LoadSnacks(1 , new SnackPile(new Snack("Lays") , 10 , 1m)); // Load snacks into the machine
+            snackMachine.LoadSnacks(1 , new SnackPile(Snack.Chochlate , 10 , 1m)); // Load snacks into the machine
             snackMachine.InsertMoney(OneDollar);
  
             snackMachine.MoneyInTransaction.Should().Be(1.01m);
@@ -55,7 +55,7 @@ namespace PracticingDDD.Tests
         public void BuySnack_trades_inserted_money_for_a_snack()
         {
             var snackMachine = new SnackMachine();
-            snackMachine.LoadSnacks(1, new SnackPile(new Snack("Lays") , 10 , 1m)); // Load a snack into the machine
+            snackMachine.LoadSnacks(1, new SnackPile(Snack.Chochlate , 10 , 1m)); // Load a snack into the machine
             snackMachine.InsertMoney(OneDollar); // Insert one dollar
 
             snackMachine.BuySnack(1);
@@ -78,7 +78,7 @@ namespace PracticingDDD.Tests
         public void Cannot_make_purchase_if_not_enough_money_inserted()
         {
             var snackMachine = new SnackMachine();
-            snackMachine.LoadSnacks(1, new SnackPile(new Snack("Snack"), 1, 2m));
+            snackMachine.LoadSnacks(1, new SnackPile(Snack.Chochlate, 1, 2m));
             snackMachine.InsertMoney(OneDollar);
         
             Action action = () => snackMachine.BuySnack(1);
@@ -106,7 +106,7 @@ namespace PracticingDDD.Tests
         public void After_purchase_change_is_returned()
         {
             var snackMachine = new SnackMachine();
-            snackMachine.LoadSnacks(1, new SnackPile(new Snack("Snack"), 1, 0.5m));
+            snackMachine.LoadSnacks(1, new SnackPile(Snack.Chochlate, 1, 0.5m));
             snackMachine.LoadMoney(TenCents * 10); // Load 1 dollar in TenCents
         
             snackMachine.InsertMoney(OneDollar);
@@ -120,7 +120,7 @@ namespace PracticingDDD.Tests
         public void Cannot_buy_snack_if_not_enough_change()
         {
             var snackMachine = new SnackMachine();
-            snackMachine.LoadSnacks(1, new SnackPile(new Snack("Snack"), 1, 0.5m));
+            snackMachine.LoadSnacks(1, new SnackPile(Snack.Chochlate, 1, 0.5m));
             snackMachine.InsertMoney(OneDollar);
         
             Action action = () => snackMachine.BuySnack(1);

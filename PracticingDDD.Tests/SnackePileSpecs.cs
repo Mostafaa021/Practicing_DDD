@@ -26,24 +26,22 @@ namespace PracticingDDD.Tests
         public void Constructor_Should_Throw_InvalidOperationException_When_Quantity_Is_Negative()
         {
             // Arrange
-            var snack = new Snack("Chips");
             int quantity = -1;
             decimal price = 1.50m;
 
             // Act & Assert
-            Action action = () => new SnackPile(snack, quantity, price);
+            Action action = () => new SnackPile(Snack.Chochlate, quantity, price);
             action.Should().Throw<InvalidOperationException>();
         }
         [Fact]
         public void Constructor_Should_Throw_InvalidOperationException_When_Price_Is_Negative()
         {
             // Arrange
-            var snack = new Snack("Chips");
             int quantity = 5;
             decimal price = -1.50m;
 
             // Act & Assert
-            Action action = () => new SnackPile(snack, quantity, price);
+            Action action = () => new SnackPile(Snack.Chochlate, quantity, price);
             action.Should().Throw<InvalidOperationException>();
 
         }
@@ -51,12 +49,11 @@ namespace PracticingDDD.Tests
         public void Constructor_Should_Throw_InvalidOperationException_When_Price_Has_More_Than_Two_Decimal_Places()
         {
             // Arrange
-            var snack = new Snack("Chips");
             int quantity = 5;
             decimal price = 1.555m; // More than 2 decimal places
 
             // Act & Assert
-            Action action = () => new SnackPile(snack, quantity, price);
+            Action action = () => new SnackPile(Snack.Chochlate, quantity, price);
             action.Should().Throw<InvalidOperationException>();
         }
 
@@ -64,12 +61,11 @@ namespace PracticingDDD.Tests
         public void Constructor_Should_Not_Throw_When_Price_Has_Valid_Decimal_Places()
         {
             // Arrange
-            var snack = new Snack("Chips");
             int quantity = 5;
             decimal price = 1.50m; // Valid 2 decimal places
 
             // Act & Assert
-            Action action = () => new SnackPile(snack, quantity, price);
+            Action action = () => new SnackPile(Snack.Chochlate, quantity, price);
             action.Should().NotThrow();
         }
         

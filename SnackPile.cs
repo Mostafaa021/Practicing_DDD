@@ -4,6 +4,7 @@ namespace PracticingDDD.Logic
 {
     public class SnackPile : ValueObject<SnackPile>
     {
+        public static readonly SnackPile Empty = new SnackPile(Snack.None, 0, 0.00m);
         public Snack Snack { get; }
         public int Quantity { get; }
         public decimal Price { get;  }
